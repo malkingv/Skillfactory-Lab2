@@ -57,7 +57,7 @@ h4{
     display: flex;
     justify-content: space-between;
     height: 83px;
-    max-width: 1440px; 
+    max-width: 1260px; 
     margin: 0 auto;
     align-items: center;
     font-size: 11px;
@@ -71,7 +71,7 @@ h4{
     text-decoration: underline;
     color: #E3B873;
 }
-.header button, .data-entry .submit{
+.header button, .data-entry .submit, .repair-option, .request2 button{
     background-color: #E3B873;
     border: none;
     border-radius: 2px;
@@ -86,8 +86,8 @@ h4{
     padding: 13px 33px;
 }
 /*********************************отступы*******************************/
-.upper-main .text-box, .complited-projects{
-    max-width: 1440px;
+.upper-main .text-box, .complited-projects, .conteiner-request .request{
+    max-width: 1260px;
     margin: 0 auto;
 }
 .upper-main .text-box, .complited-projects{
@@ -108,9 +108,9 @@ h4{
     display: block;
 }
 .upper-main .text-box{
-    padding-top: 194px;
     font-size: 22px;
     line-height: 36px;
+    padding: 194px 0 0 134px;
 }
 .upper-main .text-box h1{
     font-size: 40px;
@@ -119,6 +119,9 @@ h4{
 }
 .upper-main .text-box h1 span{
     color: #E3B873;
+}
+.upper-main .text-box p{
+    line-height: 36px;
 }
 .upper-main a{
     display: block;
@@ -213,14 +216,13 @@ h4{
 .online-control{
     margin-top: -324px;
     text-align: center;
-    height: 780px;
 }
 .upper-video h3{
     font-size: 20px;
     color: #fff;
     margin-bottom: 13px;
 }
-.upper-video .logo img{
+.upper-video .logo img, .types-of-repair .logo img{
     vertical-align: middle;
     margin-bottom: 31px;
 }
@@ -247,7 +249,7 @@ h4{
     color: #fff;
     font-size: 25px;
 }
-.upper-video input:active{
+.upper-video input:hover{
     background-color: #C09C62
 }
 .under-video .indent{
@@ -272,7 +274,10 @@ h4{
     line-height: 27px;
     text-transform: uppercase;
 }
-.data-entry .name, .data-entry .phone{
+.data-entry .submit:hover, .repair-option:hover, .request2 button:hover{
+    background-color: #C09C62;
+}
+.data-entry .name, .data-entry .phone, .data-entry .email{
     width: 231px;
     margin-right: 58px;
     text-align: left;
@@ -295,10 +300,10 @@ h4{
 .under-video .agree{
     margin-top: 39px;
 }
-.under-video .agree input[type="checkbox"] {
+.under-video .agree input[type="checkbox"], .request2 .agree input[type="checkbox"] {
     display: none;
 }
-.under-video .agree label {
+.under-video .agree label, .request2 .agree label{
     color: #181818;
     cursor: default;
     font-weight: normal;
@@ -306,20 +311,134 @@ h4{
     line-height: 23px;
     vertical-align: middle;
 }
-.under-video .agree label:before {
+.under-video .agree label:before, .request2 .agree label:before {
     content: " ";
     display: inline-block;
     margin-right: 8px;
     width: 18px;
     height: 18px;
-    padding-bottom: 2px;
+    padding-bottom: 3px;
     border: 1px solid rgba(54, 54, 54, 0.3);
     border-image: initial;
     vertical-align: top;
 }
-.under-video .agree input:checked + label:before {
+.under-video .agree input:checked + label:before, .request2 .agree input:checked + label:before {
     content: "\2714";
     color: #fff;
     background-color: #E3B873;
+}
+/*******************************types-of-repair*******************************/
+.types-of-repair{
+    text-align: center;
+    margin-top: 148px;
+}
+.types-of-repair h3{
+    color: #363636;
+}
+.conteiner-types-of-repair{
+    display: flex;
+    justify-content: center;
+}
+.conteiner-types-of-repair img{
+    width: 392px;
+    height: 421px;
+    margin: 0 15px;
+}
+.conteiner-types-of-repair .option{
+    background-color: #fff;
+    width: 330px;
+    margin: -127px auto 0;
+    position: relative;
+    z-index: 0;
+    text-align: left;
+    padding-top: 25px;
+    padding-left: 34px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+}
+.conteiner-types-of-repair ul{
+    padding: 13px 0 49px 17px;
+}
+.conteiner-types-of-repair li{
+    color: #959595;
+    line-height: 27px;
+    font-size: 13px;
+}
+.conteiner-types-of-repair a{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 17px 21px;
+    color: #fff;
+    font-family: Yeseva One;
+}
+.repair-option{
+    display: block;
+    margin: -45px 0 124px 29px;
+    z-index: 1;
+    position: relative;
+}
+/*******************types of repair - request*************************/
+.conteiner-request{
+    background: url(images/request1.png) no-repeat;
+    height: 645px;
+}
+.request1{
+    padding: 117px 0 0 10%;
+}
+.request2{
+    padding-left: 49px;
+    height: 509px;
+    width: 506px;
+    background-color:  #131313;
+    margin-top: 100px;
+}
+.request2 p{
+    text-align: center;
+    padding: 28px 49px 0 0;
+    font-size: 18px;
+}
+.request2 p, .request2 .data-entry input::placeholder{
+    color: #fff;
+}
+.request2 .data-entry input {
+    background-color:  #131313;
+    color: #fff;
+    width: 408px;
+}
+.request2 .data-entry label{
+    color: rgba(256, 256, 256, .5);
+}
+.request2 .name, .request2 .email, .request2 .phone {
+    width: 408px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+    margin-top: 48px;
+}
+.request2 .name{
+    margin-top: 39px;
+}
+.request2 .agree{
+    width: 408px;
+    margin-top: 16px;
+}
+.request{
+    display: flex;
+    justify-content: space-between;
+}
+.request2 .agree label:before{
+    background-color: #959595;
+    text-align: center;
+}
+.request2 button{
+    display: flex;
+    justify-content: end;
+}
+.request2 button a{
+    display: block;
+    padding: 19px 21px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
 }
 
