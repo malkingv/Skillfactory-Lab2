@@ -32,6 +32,17 @@ h4{
     font-size: 14px;
     line-height: 19.5px;
 }
+button{
+    padding: 0;
+    border: none;
+    color: inherit;
+    background-color: transparent;
+}
+button a{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+}
 .nav-header li{
     margin-right: 47px;
     list-style-type: none;
@@ -71,7 +82,7 @@ h4{
     text-decoration: underline;
     color: #E3B873;
 }
-.header button, .data-entry .submit, .repair-option, .request2 button{
+.header button, .data-entry .submit, .repair-option, .request2 button, .data-entry3 button{
     background-color: #E3B873;
     border: none;
     border-radius: 2px;
@@ -82,11 +93,11 @@ h4{
     background-color: #fff;
 }
 .header button a{
-    display: block;
+    /* display: block; */
     padding: 13px 33px;
 }
 /*********************************отступы*******************************/
-.upper-main .text-box, .complited-projects, .conteiner-request .request{
+.upper-main .text-box, .complited-projects, .conteiner-request .request, .wildest-fantasie-wrapper, .our-clients-wrapper, .adress-wrapper, .conteiner-types-of-repair{
     max-width: 1260px;
     margin: 0 auto;
 }
@@ -101,7 +112,7 @@ h4{
     height: 707px;
     color: #fff;
 }
-.upper-main .filter{
+.filter{
     background-color: rgba(0, 0, 0, .7);
     height: 100%;
     width: 100%;
@@ -172,7 +183,7 @@ h4{
     margin-bottom: 9px;
 }
 .description .indent{
-    margin-top: -8px;
+    margin: -8px 0 40px;
 }
 .complited-projects .area{
     display: flex;
@@ -195,34 +206,31 @@ h4{
 .complited-projects img{
     height: 482px;
 }
-.complited-projects .switch-img button{
-    color: #fff;
-    margin: 40px 17px 0 0;
-    background-color: #000;
-    padding: 0;
+.switch-img{
+    display: flex;
+    justify-content: space-between;
+    width: 250px
 }
-.switch-img input{
-    width: 49px;
-    padding-bottom: 2px;
-    display: block;
+.switch-img img{
+    height: 14px;
 }
-.switch-img a{
+/* .switch-img a{
     display: block;
     font-size: 30px;
     text-decoration: none;
     color: #fff;
-}
+} */
 /**********************online-control**************************/
 .online-control{
     margin-top: -324px;
     text-align: center;
 }
-.upper-video h3{
+.upper-video h3, .types-of-repair h3, .our-clients h3{
     font-size: 20px;
     color: #fff;
     margin-bottom: 13px;
 }
-.upper-video .logo img, .types-of-repair .logo img{
+.upper-video .logo img, .types-of-repair .logo img{ /*надо поправить*/
     vertical-align: middle;
     margin-bottom: 31px;
 }
@@ -274,10 +282,10 @@ h4{
     line-height: 27px;
     text-transform: uppercase;
 }
-.data-entry .submit:hover, .repair-option:hover, .request2 button:hover{
+.data-entry .submit:hover, .repair-option:hover, .request2 button:hover, .data-entry3 button:hover{
     background-color: #C09C62;
 }
-.data-entry .name, .data-entry .phone, .data-entry .email{
+.data-entry .name1, .data-entry .phone1, .data-entry .email{
     width: 231px;
     margin-right: 58px;
     text-align: left;
@@ -288,8 +296,10 @@ h4{
 }
 .data-entry input{
     border: none;
-    width: 230px;
     margin-top: 7px;
+}
+.name1 input, .phone1 input{
+    width: 230px;
 }
 
 .data-entry ::placeholder{
@@ -300,39 +310,42 @@ h4{
 .under-video .agree{
     margin-top: 39px;
 }
-.under-video .agree input[type="checkbox"], .request2 .agree input[type="checkbox"] {
+.under-video .agree input[type="checkbox"], .request2 .agree input[type="checkbox"],.agree3 input[type="checkbox"] {
     display: none;
 }
-.under-video .agree label, .request2 .agree label{
+.under-video .agree label, .request2 .agree label, .agree3 label{
     color: #181818;
     cursor: default;
     font-weight: normal;
     font-size: 14px;
     line-height: 23px;
-    vertical-align: middle;
+    vertical-align: bottom;
 }
-.under-video .agree label:before, .request2 .agree label:before {
+.under-video .agree label:before, .request2 .agree label:before, .agree3 label:before {
     content: " ";
     display: inline-block;
     margin-right: 8px;
     width: 18px;
     height: 18px;
-    padding-bottom: 3px;
     border: 1px solid rgba(54, 54, 54, 0.3);
     border-image: initial;
     vertical-align: top;
 }
-.under-video .agree input:checked + label:before, .request2 .agree input:checked + label:before {
+.under-video .agree input:checked + label:before, .request2 .agree input:checked + label:before, .agree3 input:checked + label:before{
     content: "\2714";
     color: #fff;
     background-color: #E3B873;
+    line-height: 20px;
 }
 /*******************************types-of-repair*******************************/
 .types-of-repair{
-    text-align: center;
+    text-align: left;
     margin-top: 148px;
 }
-.types-of-repair h3{
+.types-of-repair .logo{
+    text-align: center;
+}
+.types-of-repair h3, .our-clients h3{
     color: #363636;
 }
 .conteiner-types-of-repair{
@@ -386,16 +399,40 @@ h4{
 .request1{
     padding: 117px 0 0 10%;
 }
+.request1 ol { 
+    counter-reset: item;
+    list-style-type: none;
+}
+.request1 li {
+     display: flex; 
+     margin-bottom: 67px;
+    align-items: center;
+
+}
+.request1 li:before { 
+    content: counter(item, decimal-leading-zero) ""; 
+    counter-increment: item;
+    font-size: 18px;
+    font-family: 'Yeseva One';
+    color: #fff;
+    padding: 17px;
+    background-color: #E3B873;
+    border: 7px solid #fff;
+    border-radius: 50%;
+    margin-right: 15px;
+}
 .request2{
-    padding-left: 49px;
     height: 509px;
     width: 506px;
     background-color:  #131313;
     margin-top: 100px;
 }
+.request2 .data-entry>div{
+    padding-left: 49px;
+}
 .request2 p{
     text-align: center;
-    padding: 28px 49px 0 0;
+    padding-top: 28px;
     font-size: 18px;
 }
 .request2 p, .request2 .data-entry input::placeholder{
@@ -406,12 +443,12 @@ h4{
     color: #fff;
     width: 408px;
 }
-.request2 .data-entry label{
+.request2 .data-entry label, .questions label{
     color: rgba(256, 256, 256, .5);
 }
-.request2 .name, .request2 .email, .request2 .phone {
+.request2 .name, .request2 .email, .request2 .phone{
     width: 408px;
-    padding-bottom: 8px;
+    padding-bottom: 3px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.15);
     margin-top: 48px;
 }
@@ -420,25 +457,207 @@ h4{
 }
 .request2 .agree{
     width: 408px;
-    margin-top: 16px;
+    margin-top: 10px;
+    text-align: left;
 }
 .request{
     display: flex;
     justify-content: space-between;
 }
 .request2 .agree label:before{
-    background-color: #959595;
+    background-color: #363636;
     text-align: center;
 }
 .request2 button{
-    display: flex;
-    justify-content: end;
+    display: block;
+    margin: 20px auto 0;
 }
 .request2 button a{
-    display: block;
+    /* display: block; */
+    width: 170px;
     padding: 19px 21px;
+    /* text-decoration: none;
+    text-transform: uppercase; */
+    color: #fff;
+}
+.request2 .pig{
+    display: flex;
+    margin: 60px 0 0 20px;
+}
+.request2 .pig p{
+    color: #E3B873;
+    font-size: 18px;
+    text-align: left;
+    padding-top: 22px;
+}
+/*******************types of repair - wildest-fantasies*************************/
+.wildest-fantasies-conteiner{
+    background-image: url(images/wildest-fantasies.png);
+    height: 864px;
+    margin: 260px 0 110px;
+    display: flex;
+}
+.wildest-fantasie-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.wildest-fantasies1 ul{
+    padding: 0;
+}
+.wildest-fantasies1 li{
+    list-style-type: none;
+    margin-bottom: 25px;
+}
+.wildest-fantasies1 li a{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+.wildest-fantasies1 li a:hover{
+    color: #E3B873;
+}
+.wildest-fantasies1, .wildest-fantasies2, .wildest-fantasies3{
+    display: flex;
+    flex-direction: column;
+    width: 354px;
+}
+.wildest-fantasies1{
+    text-align: left;
+}
+.wildest-fantasies1 h2{
+    padding: 110px 0 30px;
+}
+.wildest-fantasies2{
+    margin-top: -41px;
+    padding-left: 110px;
+}
+.wildest-fantasie-wrapper .offset{
+    margin-bottom: 38px;
+}
+.wildest-fantasies3{
+    margin-top: -112px;
+}
+.our-clients>div{
+    text-align: center;
+}
+.our-clients p{
+    font-size: 18px;
+    color: #363636;
+    line-height: 27px;
+    margin: 24px 0 39px;
+}
+.our-clients-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.our-clients1 img, .our-clients2 img, .our-clients3 img{
+    display: inline-block;
+}
+.our-clients1 h3, .our-clients2 h3, .our-clients3 h3{
+    display: inline-block;
+    vertical-align: bottom;   
+    text-align: left; 
+    margin-left: 20px;
+}
+.our-clients1 p, .our-clients2 p, .our-clients3 p{
+    text-align: left;
+    font-size: 13px;
+    line-height: 23px;
+}
+.our-clients1, .our-clients2, .our-clients3{
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+    padding: 25px 32px 30px 20px;
+}
+.our-clients .offset{
+    margin: -40px 0 354px -15px;
+}
+.our-clients{
+    background-image: url(images/our-clients-background.svg);
+    background-position-y: bottom;
+    background-repeat: repeat-x;
+    height: 1000px;
+}
+/***************************questions*********************************/
+.adress-conteiner{
+    height: 954px;
+    background-image: url(images/questions.svg);
+}
+.questions{
+    width: 883px;
+    height: 445px;
+    background-color: #000;
+    margin: 0 auto;
+    margin-top: -230px;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+}
+.questions h3{
+    align-items: center;
+    color: #fff;
+    padding-top: 34px;
+}
+.questions .data-entry label{
+    text-align: left;
+}
+.data-entry3{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 517px;
+}
+.data-entry3 label{
+    display: flex;
+    margin-top: 40px;
+}
+.name3 input, .phone3 input, .question3 input{
+    width: 231px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: #000;
+    color: #fff;
+}
+
+.question3,.question3 input, .agree3 {
+    width: 517px;
+}
+.data-entry3 input::placeholder{ 
+    color: #fff;
+}
+.data-entry3 input {
+    background-color:  #000;
+    color: #fff;
+}
+.agree3{
+    margin: 40px auto 0;
+}
+.agree3 label::before{
+    text-align: center;
+    background-color: #363636;
+}
+.data-entry3 a{
+    display: block;
+    padding: 20px 70px;
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
 }
-
+.data-entry3 button{
+    margin: 40px auto 0;
+}
+/*************************adress***********************/
+.adress-wrapper{
+    text-align: center;
+    padding-top: 270px;
+}
+.adress-wrapper button{
+    margin: 26px 8px 43px;
+}
+#map{
+    width: 925px;
+    height: 465px;
+}
+/***************foooter*********************/
+#footer{
+    height: 133px;
+}
