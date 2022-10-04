@@ -93,17 +93,17 @@ button a{
     background-color: #fff;
 }
 .header button a{
-    /* display: block; */
     padding: 13px 33px;
 }
+
 /*********************************отступы*******************************/
-.upper-main .text-box, .complited-projects, .conteiner-request .request, .wildest-fantasie-wrapper, .our-clients-wrapper, .adress-wrapper, .conteiner-types-of-repair{
+.upper-main .text-box, .complited-projects, .conteiner-request .request, .wildest-fantasie-wrapper, .our-clients-wrapper, .adress-wrapper, .conteiner-types-of-repair, .complited-projects-conteiner nav{
     max-width: 1260px;
     margin: 0 auto;
 }
-.upper-main .text-box, .complited-projects{
+/* .upper-main .text-box, .complited-projects{
     min-width: 1170px;
-}
+} */
 /*********************************upper-main**********************************/
 .upper-main{
     display: flex;
@@ -123,11 +123,16 @@ button a{
     line-height: 36px;
     padding: 194px 0 0 134px;
 }
+
 .upper-main .text-box h1{
     font-size: 40px;
     text-transform: uppercase;
     margin-bottom: 19px;
 }
+/* .upper-main .text-box h1{
+    font-size: 23px;
+    margin-bottom: 16px;
+} */
 .upper-main .text-box h1 span{
     color: #E3B873;
 }
@@ -149,6 +154,7 @@ button a{
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
     transition: all .5s ease;  
 }
+
 .upper-main button:hover{
     background-color: #E3B873;
     border: 1px solid #E3B873;
@@ -160,20 +166,29 @@ button a{
 .complited-projects{
     display: flex;
     justify-content: space-between;
-    height: 1074px;
+    height: 874px;
     background-color: #000;
     color: #fff;
+    flex-wrap: wrap;
 }
+
 .complited-projects .description{
-    margin-top: 176px;
+    /* margin-top: 176px; */
     width: 492px;
     height: 482px;
 }
+/* .complited-projects .wrapper{ */
 .complited-projects .wrapper{
     display: flex;
+    flex-wrap: wrap;
+    order: 3;
+    width: 450px;
+    height: 280px;
+    margin-top: -490px;
 }
-.complited-projects .wrapper>div{
+.wrapper .spec{
     width: 213px;
+    height: 90px;
     margin-top: 42px;
 }
 .complited-projects h2{
@@ -182,44 +197,73 @@ button a{
 .complited-projects h3{
     margin-bottom: 9px;
 }
-.description .indent{
-    margin: -8px 0 40px;
-}
-.complited-projects .area{
+.complited-projects-conteiner nav ul{
     display: flex;
-    justify-content: space-between;
-    width: 630px;
-    margin-top: 107px;
+    padding: 0;
 }
-.complited-projects .area a{
+.complited-projects-conteiner nav li{
+    margin-left: 47px;
+    list-style-type: none;
+}
+.complited-projects-conteiner nav{
+    justify-content: flex-end;
+    display: flex;
+    padding: 107px 30px 0 0;
+}
+/* .complited-projects-conteiner nav a{
     display: inline-flex;
     color: rgba(256, 256, 256, 0.3);
     text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Yeseva One";
     padding-bottom: 5px;
     margin-bottom: 47px;
     border-bottom: #000 1px solid;
 }
-.complited-projects .area a:hover{
+
+.complited-projects-conteiner nav a:hover{
     color: #E3B873;
     border-bottom: #E3B873 1px solid;
-}
+} */
+
 .complited-projects img{
     height: 482px;
+}
+.complited-projects .photo{
+    height: 496px;
 }
 .switch-img{
     display: flex;
     justify-content: space-between;
-    width: 250px
+    width: 250px;
+    order: 4;
+    padding-top: 10px;
 }
 .switch-img img{
     height: 14px;
 }
-/* .switch-img a{
-    display: block;
-    font-size: 30px;
+/**********radio***************/
+.radio {
+	display: inline-block;
+    margin: 0 0 47px 47px
+}
+.radio input[type=radio] {
+	display: none;
+}
+.radio label {
+	display: inline-block;
+	cursor: pointer;
+	line-height: 34px;
+    color: rgba(256, 256, 256, 0.3);
     text-decoration: none;
-    color: #fff;
-} */
+    text-transform: uppercase;
+    font-family: "Yeseva One";
+	user-select: none;
+}
+.radio input[type=radio]:checked + label {
+	color: #E3B873;
+}
+
 /**********************online-control**************************/
 .online-control{
     margin-top: -324px;
@@ -350,12 +394,11 @@ button a{
 }
 .conteiner-types-of-repair{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 .conteiner-types-of-repair img{
     width: 392px;
     height: 421px;
-    margin: 0 15px;
 }
 .conteiner-types-of-repair .option{
     background-color: #fff;
@@ -387,7 +430,7 @@ button a{
 }
 .repair-option{
     display: block;
-    margin: -45px 0 124px 29px;
+    margin: -45px 0 124px 15px;
     z-index: 1;
     position: relative;
 }
@@ -446,13 +489,13 @@ button a{
 .request2 .data-entry label, .questions label{
     color: rgba(256, 256, 256, .5);
 }
-.request2 .name, .request2 .email, .request2 .phone{
+.request2 .name2, .request2 .email2, .request2 .phone2{
     width: 408px;
     padding-bottom: 3px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.15);
     margin-top: 48px;
 }
-.request2 .name{
+.request2 .name2{
     margin-top: 39px;
 }
 .request2 .agree{
@@ -473,11 +516,8 @@ button a{
     margin: 20px auto 0;
 }
 .request2 button a{
-    /* display: block; */
     width: 170px;
     padding: 19px 21px;
-    /* text-decoration: none;
-    text-transform: uppercase; */
     color: #fff;
 }
 .request2 .pig{
@@ -660,4 +700,119 @@ button a{
 /***************foooter*********************/
 #footer{
     height: 133px;
+}
+/******************media-запросы*******************/
+@media screen and (min-width: 768px) and (max-width: 1299px){
+    /*****header*****/
+    .header{
+        height: 56px;
+        max-width: 700px; 
+    }
+    .header button{
+        display: none;
+    }
+    .nav-header{
+        display: none;
+    }
+    .number-header a{
+        text-decoration: none;
+        color: #fff;
+    }
+    /*******отступы*************/
+    .upper-main .text-box, .complited-projects, .conteiner-request .request, .wildest-fantasie-wrapper, .our-clients-wrapper, .adress-wrapper, .conteiner-types-of-repair{
+        max-width: 700px;
+    }
+    body{
+        max-width: 768px;
+    }
+    /*******1st block***********/
+    .upper-main{
+        height: 375px;
+    }
+    .upper-main .text-box{
+        padding: 80px 0 0 0;
+    }
+    .upper-main button{
+        width: 47%;
+    }
+    .upper-main .text-box p{
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .upper-main .text-box h1{
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .upper-main button {
+        margin-right: 0px;
+    }
+    .upper-main .text-box>div{
+        display: flex;
+        justify-content: space-between;
+    }
+    /**********2nd block*********/
+    .complited-projects{
+        flex-direction: column;
+        justify-content: flex-start;
+        height: auto;
+        padding-bottom: 64px;
+    }
+    .complited-projects .description {
+        order: 0;
+        height: auto;
+        text-align: center;
+        width: 320px;
+        margin: 36px auto 30px;
+    }
+    .complited-projects .description h2{
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 22px;
+    }
+    .complited-projects .description p{
+        font-size: 11px;
+        line-height: 17px;
+    }
+    .complited-projects-conteiner nav{
+        display: none;
+    }
+    .complited-projects .photo{
+        order: 1;
+    }
+    .complited-projects img {
+        height: auto;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .wrapper{
+        justify-content: space-between;
+    }
+    .wrapper h3{
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .wrapper p{
+        font-size: 12px;
+        line-height: 18px;
+    }
+    
+
+    .complited-projects .wrapper{
+        order: 2;
+        margin-top: 0;
+        width: 100%;
+        height: 200px;
+    }
+    .wrapper .spec{
+        width: 50%;
+        height: 60px;
+    }
+    .switch-img{
+        display: none;
+    }
+    /**********3rd block**************/
+    .online-control {
+        margin-top: 0;
+        background-color: #000;
+    }
 }
