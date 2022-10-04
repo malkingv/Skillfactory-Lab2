@@ -13,6 +13,7 @@ h1{
     line-height: 53px;
     font-weight: 400;
     margin: 0;
+    font-size: 40px;
 }
 h2, h3, h4{
     font-family: 'Yeseva One';
@@ -101,9 +102,6 @@ button a{
     max-width: 1260px;
     margin: 0 auto;
 }
-/* .upper-main .text-box, .complited-projects{
-    min-width: 1170px;
-} */
 /*********************************upper-main**********************************/
 .upper-main{
     display: flex;
@@ -125,14 +123,9 @@ button a{
 }
 
 .upper-main .text-box h1{
-    font-size: 40px;
     text-transform: uppercase;
     margin-bottom: 19px;
 }
-/* .upper-main .text-box h1{
-    font-size: 23px;
-    margin-bottom: 16px;
-} */
 .upper-main .text-box h1 span{
     color: #E3B873;
 }
@@ -173,18 +166,18 @@ button a{
 }
 
 .complited-projects .description{
-    /* margin-top: 176px; */
     width: 492px;
     height: 482px;
 }
-/* .complited-projects .wrapper{ */
+.complited-projects article:nth-of-type(1){
+    order: 2;
+    height: 300px;
+    margin-top: -490px;
+}
 .complited-projects .wrapper{
     display: flex;
     flex-wrap: wrap;
-    order: 3;
     width: 450px;
-    height: 280px;
-    margin-top: -490px;
 }
 .wrapper .spec{
     width: 213px;
@@ -220,17 +213,32 @@ button a{
     margin-bottom: 47px;
     border-bottom: #000 1px solid;
 }
-
 .complited-projects-conteiner nav a:hover{
     color: #E3B873;
     border-bottom: #E3B873 1px solid;
 } */
-
 .complited-projects img{
     height: 482px;
 }
 .complited-projects .photo{
     height: 496px;
+}
+.photo .swipe, .swipe2{
+    margin: -270px auto;
+    width: 95%;
+    justify-content: space-between;
+    display: flex;
+    display: none;
+}
+.photo .swipe img, .swipe2 img{
+    width: 36px;
+    height: 36px;
+}
+.photo .swipe img:hover{
+    filter: brightness(.9);
+}
+.swipe2{
+    display: none;
 }
 .switch-img{
     display: flex;
@@ -274,6 +282,11 @@ button a{
     color: #fff;
     margin-bottom: 13px;
 }
+.upper-video h2, .types-of-repair h2, .our-clients h2{
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 13px;
+}
 .upper-video .logo img, .types-of-repair .logo img{ /*надо поправить*/
     vertical-align: middle;
     margin-bottom: 31px;
@@ -311,11 +324,15 @@ button a{
     font-size: 18px;
     line-height: 37px;
     color: #363636;
-    margin-bottom: 93px;
+    width: 650px;
+    margin: 0 auto 93px;
 }
 .under-video .data-entry{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    width: 800px;
+    margin: 0 auto;
 }
 .data-entry .submit a{
     display: block;
@@ -354,7 +371,7 @@ button a{
 .under-video .agree{
     margin-top: 39px;
 }
-.under-video .agree input[type="checkbox"], .request2 .agree input[type="checkbox"],.agree3 input[type="checkbox"] {
+.under-video .agree input[type="checkbox"], .request2 .agree input[type="checkbox"], .agree3 input[type="checkbox"] {
     display: none;
 }
 .under-video .agree label, .request2 .agree label, .agree3 label{
@@ -390,6 +407,9 @@ button a{
     text-align: center;
 }
 .types-of-repair h3, .our-clients h3{
+    color: #363636;
+}
+.types-of-repair h2, .our-clients h2{
     color: #363636;
 }
 .conteiner-types-of-repair{
@@ -556,6 +576,9 @@ button a{
 .wildest-fantasies1 li a:hover{
     color: #E3B873;
 }
+.swipe-img{
+    display: none;
+}   
 .wildest-fantasies1, .wildest-fantasies2, .wildest-fantasies3{
     display: flex;
     flex-direction: column;
@@ -566,6 +589,7 @@ button a{
 }
 .wildest-fantasies1 h2{
     padding: 110px 0 30px;
+    color: #E3B873;
 }
 .wildest-fantasies2{
     margin-top: -41px;
@@ -626,8 +650,7 @@ button a{
     width: 883px;
     height: 445px;
     background-color: #000;
-    margin: 0 auto;
-    margin-top: -230px;
+    margin: -231px auto;
     z-index: 1;
     position: relative;
     text-align: center;
@@ -643,6 +666,7 @@ button a{
 .data-entry3{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 0 auto;
     width: 517px;
 }
@@ -669,7 +693,8 @@ button a{
     color: #fff;
 }
 .agree3{
-    margin: 40px auto 0;
+    display: flex;
+    justify-content: center;
 }
 .agree3 label::before{
     text-align: center;
@@ -702,11 +727,10 @@ button a{
     height: 133px;
 }
 /******************media-запросы*******************/
-@media screen and (min-width: 768px) and (max-width: 1299px){
+@media screen and (max-width: 1299px){
     /*****header*****/
     .header{
-        height: 56px;
-        max-width: 700px; 
+        height: 56px; 
     }
     .header button{
         display: none;
@@ -719,7 +743,7 @@ button a{
         color: #fff;
     }
     /*******отступы*************/
-    .upper-main .text-box, .complited-projects, .conteiner-request .request, .wildest-fantasie-wrapper, .our-clients-wrapper, .adress-wrapper, .conteiner-types-of-repair{
+    .header, .upper-main .text-box, .complited-projects, .conteiner-request .request, .wildest-fantasie-wrapper, .our-clients-wrapper, .adress-wrapper, .conteiner-types-of-repair, .upper-video .video, .under-video .data-entry{
         max-width: 700px;
     }
     body{
@@ -782,10 +806,10 @@ button a{
     .complited-projects img {
         height: auto;
         width: 100%;
-        margin: 0 auto;
     }
-    .wrapper{
+    .complited-projects .wrapper {
         justify-content: space-between;
+        width: 100%;
     }
     .wrapper h3{
         font-size: 14px;
@@ -795,9 +819,7 @@ button a{
         font-size: 12px;
         line-height: 18px;
     }
-    
-
-    .complited-projects .wrapper{
+    .complited-projects article:nth-of-type(1){
         order: 2;
         margin-top: 0;
         width: 100%;
@@ -810,9 +832,436 @@ button a{
     .switch-img{
         display: none;
     }
+    .photo .swipe, .swipe2{
+        display: flex;
+    }
     /**********3rd block**************/
     .online-control {
         margin-top: 0;
         background-color: #000;
+    }
+
+    .online-control h2{
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .under-video p{
+        font-size: 11px;
+        line-height: 19px;
+        color: #fff;
+        margin-bottom: 0;
+    }
+    .under-video .data-entry{
+        width: 100%;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    .data-entry .name1, .data-entry .phone1{
+        width: 47.5%;        
+        margin-right: 0;
+        margin-top: 60px;
+        border-bottom: 1px solid #FFFFFF80;
+    }
+    .name1 input, .phone1 input{
+        width: 100%;
+        background-color: #000;
+    }
+    .name1 input::placeholder, .phone1 input::placeholder{
+        color: #fff;
+    } 
+    .under-video .data-entry button{
+        order: 4;
+        margin-bottom: -23px;
+        width: 100%;
+    }
+    .under-video .agree {
+        margin: 25px auto 40px;
+    }
+    .name1 label, .phone1 label, .under-video .agree label{
+        color: #FFFFFF80;
+    }
+    .under-video .agree label:before{
+        border: 1px solid #FFFFFF80;
+    }
+    /***********4 block***************/
+    .types-of-repair {
+        margin-top: 83px;
+    }
+    .types-of-repair h3{
+        font-size: 15px;
+    }
+    .types-of-repair h2{
+        font-size: 22px;
+    }
+    .conteiner-types-of-repair {
+        flex-direction: column;
+    }
+    .conteiner-types-of-repair>div{
+        margin: 0 auto;
+    }
+    .repair-option { 
+        margin: -45px 0 60px 15px;
+    }
+    /********5 block*****************/
+    .conteiner-request{
+        display: none;
+    }
+    /********6 block*****************/
+    .wildest-fantasies-conteiner{
+        background: none;
+        height: 400px;
+        margin-top: 100px;
+    }
+    .wildest-fantasies-conteiner{
+    position: relative;
+    z-index: 1;
+    }
+    .swipe-img{
+        display: block;
+    }
+    .swipe2{
+        width: 95%;
+        position: relative;
+        z-index: 3;
+        display: flex;
+        margin: -230px auto;
+    }
+    .wildest-fantasies-conteiner .filter {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .wildest-fantasies1 {
+        text-align: center;
+        width: 100%;
+    }
+    .wildest-fantasies1 h2{ 
+        margin: -100px auto 20px;
+        padding: 0;
+    }
+    .wildest-fantasies1 ul{
+        display: none;
+    }
+    .wildest-fantasies2 {
+        display: none;
+    }
+    .wildest-fantasies3{
+        display: none;
+    }
+    /*********7 block****************/
+    .our-clients{
+        display: none;
+    }
+    /*********8 block***************/
+    .questions-wrapper{
+        height: 595px;
+        position: relative;
+        z-index: 0;
+    }   
+    .questions {
+        z-index: -1; 
+        padding-top: 150px;
+        width: 100%;
+        margin: -307px auto;
+    }
+    .adress-conteiner{
+        background-image: none;
+        background-color: #000;
+        height: 550px;
+    }
+    #map {
+        width: 100%;
+        height: auto;
+        order: -1;
+        margin-bottom: 30px;
+    }
+    .adress-wrapper{
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+    }
+    /*************footer***********/
+    footer{
+        display: none;  
+    }   
+}
+@media screen and (max-width: 768px){
+    /*****header*****/
+    .header{
+        height: 56px;
+    }
+    .header button{
+        display: none;
+    }
+    .nav-header{
+        display: none;
+    }
+    .number-header a{
+        text-decoration: none;
+        color: #fff;
+    }
+    /*******отступы*************/
+    .header, .upper-main .text-box, .complited-projects, .conteiner-request .request, .wildest-fantasie-wrapper, .our-clients-wrapper, .adress-wrapper, .conteiner-types-of-repair, .upper-video .video, .under-video .data-entry,.questions .data-entry3{
+        max-width: 350px;
+    }
+    body{
+        max-width: 375px;
+    }
+    /*******1st block***********/
+    .upper-main{
+        height: 476px;
+    }
+    .upper-main .text-box{
+        padding: 80px 0 0 0;
+    }
+    .upper-main button{
+        width: 100%;  
+        margin-top: 30px;
+    }
+    .upper-main .text-box p{
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .upper-main .text-box h1{
+        font-size: 23px;
+        line-height: 30px;
+    }
+    .upper-main button {
+        margin-right: 0px;
+    }
+    .upper-main .text-box>div{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    /**********2nd block*********/
+    .complited-projects{
+        flex-direction: column;
+        justify-content: flex-start;
+        height: auto;
+        padding-bottom: 64px;
+    }
+    .complited-projects .description {
+        order: 0;
+        height: auto;
+        text-align: center;
+        width: 320px;
+        margin: 36px auto 30px;
+    }
+    .complited-projects .description h2{
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 22px;
+    }
+    .complited-projects .description p{
+        font-size: 11px;
+        line-height: 17px;
+    }
+    .complited-projects-conteiner nav{
+        display: none;
+    }
+    .complited-projects .photo{
+        order: 1;
+        height: 250px;
+    }
+    .complited-projects img {
+        height: auto;
+        width: 100%;
+    }
+    .complited-projects .wrapper {
+        justify-content: space-between;
+        width: 100%;
+    }
+    .wrapper h3{
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .wrapper p{
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .complited-projects article:nth-of-type(1){
+        order: 2;
+        margin-top: 0;
+        width: 100%;
+        height: 200px;
+    }
+    .wrapper .spec{
+        width: 50%;
+        height: 60px;
+    }
+    .switch-img{
+        display: none;
+    }
+    .photo .swipe{
+        margin: -150px auto;
+    }
+    .photo .swipe, .swipe2{
+        display: flex;
+    }
+    /**********3rd block**************/
+    .online-control {
+        margin-top: 0;
+        background-color: #000;
+    }
+    .upper-video .video{
+        background-size: 340px 207px;
+        background-repeat: no-repeat;
+        height: 210px;
+    }
+    .upper-video .video-button{
+        margin-top: -135px;
+        position: relative;
+        z-index: 1;
+    }
+    .under-video .indent {
+        margin: 28px 0 20px;
+    }
+    .upper-video input{
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    .online-control h2{
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .under-video p{
+        font-size: 11px;
+        line-height: 19px;
+        color: #fff;
+        margin: 0 auto;
+        width: 350px;
+    }
+    .under-video .data-entry{
+        width: 100%;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    .data-entry .name1, .data-entry .phone1{
+        width: 100%;        
+        margin-right: 0;
+        margin-top: 60px;
+        border-bottom: 1px solid #FFFFFF80;
+    }
+    .name1 input, .phone1 input{
+        width: 100%;
+        background-color: #000;
+    }
+    .name1 input::placeholder, .phone1 input::placeholder{
+        color: #fff;
+    } 
+    .under-video .data-entry button{
+        order: 4;
+        margin-bottom: -23px;
+        width: 100%;
+    }
+    .under-video .agree {
+        margin: 25px auto 40px;
+    }
+    .name1 label, .phone1 label, .under-video .agree label{
+        color: #FFFFFF80;
+    }
+    .under-video .agree label:before{
+        border: 1px solid #FFFFFF80;
+    }
+    /***********4 block***************/
+    .types-of-repair {
+        margin-top: 83px;
+    }
+    .types-of-repair h3{
+        font-size: 15px;
+    }
+    .types-of-repair h2{
+        font-size: 22px;
+    }
+    .conteiner-types-of-repair {
+        flex-direction: column;
+    }
+    .conteiner-types-of-repair>div{
+        margin: 0 auto;
+    }
+    .repair-option { 
+        margin: -45px 0 60px 15px;
+    }
+    /********5 block*****************/
+    .conteiner-request{
+        display: none;
+    }
+    /********6 block*****************/
+    .wildest-fantasies-conteiner{
+        position: relative;
+        z-index: 1;
+        background: none;
+        height: 300px;
+        margin-top: 100px;
+    }
+    .swipe2{
+        width: 95%;
+        position: relative;
+        z-index: 3;
+        display: flex;
+        margin: -120px auto;
+    }
+    .wildest-fantasies-conteiner .filter {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .wildest-fantasies1 {
+        text-align: center;
+        width: 100%;
+    }
+    .wildest-fantasies1 h2{ 
+        margin: -100px auto 20px;
+        padding: 0;
+    }
+    .wildest-fantasies1 ul{
+        display: none;
+    }
+    .wildest-fantasies2 {
+        display: none;
+    }
+    .wildest-fantasies3{
+        display: none;
+    }
+    /*********7 block****************/
+    .our-clients{
+        display: none;
+    }
+    /*********8 block***************/
+    .questions-wrapper{
+        height: 595px;
+        position: relative;
+        z-index: 0;
+    }   
+    .questions {
+        z-index: -1; 
+        padding-top: 150px;
+        width: 100%;
+        margin: -307px auto;
+    }
+    .data-entry3{
+        width: 100%;
+        justify-content: center;
+    }
+    .name3, .phone3, .question3, .name3 input, .phone3 input, .question3 input{
+        width: 100%;
+    }
+    .adress-conteiner{
+        background-image: none;
+        background-color: #000;
+        height: 500px;
+    }
+    #map {
+        width: 100%;
+        height: auto;
+        order: -1;
+        margin: 70px auto 30px;
+    }
+    .adress-wrapper{
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+    }
+    /*************footer***********/
+    footer{
+        display: none;  
     }
 }
