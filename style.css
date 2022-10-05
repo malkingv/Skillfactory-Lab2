@@ -814,7 +814,7 @@ button a{
         width: 100%;
     }
     .complited-projects .wrapper {
-        justify-content: space-between;
+        justify-content: space-around;
         width: 100%;
         text-align: center;
     }
@@ -833,7 +833,7 @@ button a{
         height: 200px;
     }
     .wrapper .spec{
-        width: 50%;
+        width: 34%;
         height: 60px;
     }
     .switch-img{
