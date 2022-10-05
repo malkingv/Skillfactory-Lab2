@@ -234,7 +234,7 @@ button a{
     width: 36px;
     height: 36px;
 }
-.photo .swipe img:hover{
+.photo .swipe img:hover, .swipe2 img:hover{
     filter: brightness(.9);
 }
 .swipe2{
@@ -305,6 +305,7 @@ button a{
 .upper-video .video-button{
     margin-top: -260px;
 }
+
 .upper-video input{
     width: 83px;
     height: 83px;
@@ -744,14 +745,16 @@ button a{
     }
     /*******отступы*************/
     .header, .upper-main .text-box, .complited-projects, .conteiner-request .request, .wildest-fantasie-wrapper, .our-clients-wrapper, .adress-wrapper, .conteiner-types-of-repair, .upper-video .video, .under-video .data-entry{
-        max-width: 700px;
+        /* max-width: 700px; */
+        max-width: 90%;
     }
     body{
-        max-width: 768px;
+        /* max-width: 768px; */
+        max-width: 100%;
     }
     /*******1st block***********/
     .upper-main{
-        height: 375px;
+        height: 450px;
     }
     .upper-main .text-box{
         padding: 80px 0 0 0;
@@ -802,6 +805,9 @@ button a{
     }
     .complited-projects .photo{
         order: 1;
+        height: 481px;
+        width: 679px;
+        margin: 0 auto;
     }
     .complited-projects img {
         height: auto;
@@ -810,6 +816,7 @@ button a{
     .complited-projects .wrapper {
         justify-content: space-between;
         width: 100%;
+        text-align: center;
     }
     .wrapper h3{
         font-size: 14px;
@@ -918,6 +925,10 @@ button a{
     }
     .swipe-img{
         display: block;
+        
+        /* margin: 0 auto;
+        width
+        height */
     }
     .swipe2{
         width: 95%;
@@ -931,7 +942,9 @@ button a{
     }
     .wildest-fantasies1 {
         text-align: center;
-        width: 100%;
+        width: 678px;
+        height: 407px;
+        margin: 0 auto;
     }
     .wildest-fantasies1 h2{ 
         margin: -100px auto 20px;
@@ -958,14 +971,14 @@ button a{
     }   
     .questions {
         z-index: -1; 
-        padding-top: 150px;
+        padding-top: 220px;
         width: 100%;
         margin: -307px auto;
     }
     .adress-conteiner{
         background-image: none;
         background-color: #000;
-        height: 550px;
+        height: auto;
     }
     #map {
         width: 100%;
@@ -1000,10 +1013,12 @@ button a{
     }
     /*******отступы*************/
     .header, .upper-main .text-box, .complited-projects, .conteiner-request .request, .wildest-fantasie-wrapper, .our-clients-wrapper, .adress-wrapper, .conteiner-types-of-repair, .upper-video .video, .under-video .data-entry,.questions .data-entry3{
-        max-width: 350px;
+        /* max-width: 350px; */
+        width: 90%;
     }
     body{
-        max-width: 375px;
+        /* max-width: 375px; */
+        max-width: 100%;
     }
     /*******1st block***********/
     .upper-main{
@@ -1060,16 +1075,19 @@ button a{
     }
     .complited-projects .photo{
         order: 1;
-        height: 250px;
+        height: 280px;
+        width: 395px;
+        margin: 0 auto;
     }
     .complited-projects img {
         height: auto;
         width: 100%;
     }
-    .complited-projects .wrapper {
+    /* .complited-projects .wrapper {
         justify-content: space-between;
         width: 100%;
-    }
+        text-align: center;
+    }  дублирует */
     .wrapper h3{
         font-size: 14px;
         line-height: 19px;
@@ -1092,7 +1110,8 @@ button a{
         display: none;
     }
     .photo .swipe{
-        margin: -150px auto;
+        /* margin: -150px auto; */
+        margin: -40% auto;
     }
     .photo .swipe, .swipe2{
         display: flex;
@@ -1104,6 +1123,8 @@ button a{
     }
     .upper-video .video{
         background-size: 340px 207px;
+        background-position: center;
+        /* background-size: 100% auto; */
         background-repeat: no-repeat;
         height: 210px;
     }
@@ -1132,7 +1153,7 @@ button a{
         width: 350px;
     }
     .under-video .data-entry{
-        width: 100%;
+        width: 90%;
         justify-content: space-between;
         margin: 0 auto;
     }
@@ -1185,7 +1206,7 @@ button a{
     }
     .conteiner-types-of-repair>div{
         margin: 0 auto;
-        width: 100%;
+        width: 395px;
     }
     .repair-option { 
         margin: -45px 0 60px 15px;
@@ -1207,14 +1228,23 @@ button a{
         position: relative;
         z-index: 3;
         display: flex;
-        margin: -120px auto;
+        /* margin: -120px auto; */
+        margin: -34% auto;
     }
+    /* .swipe-img{
+        width: 395px;
+        height: 238px;
+        margin: 0 auto;
+    } */
     .wildest-fantasies-conteiner .filter {
         background-color: rgba(0, 0, 0, 0);
     }
     .wildest-fantasies1 {
         text-align: center;
-        width: 100%;
+        /* width: 100%; */
+        width: 395px;
+        height: 238px;
+        /* margin: 0 auto;  дублирует */
     }
     .wildest-fantasies1 h2{ 
         margin: -100px auto 20px;
@@ -1252,11 +1282,11 @@ button a{
     .name3, .phone3, .question3, .name3 input, .phone3 input, .question3 input{
         width: 100%;
     }
-    .adress-conteiner{
+    /* .adress-conteiner{
         background-image: none;
         background-color: #000;
-        height: 500px;
-    }
+        height: auto;
+    } дублирует */
     #map {
         width: 100%;
         height: auto;
@@ -1267,6 +1297,9 @@ button a{
         display: flex;
         flex-direction: column;
         padding-top: 30px;
+    }
+    .adress-wrapper button{
+        margin: 26px 8px 30px;
     }
     /*************footer***********/
     footer{
